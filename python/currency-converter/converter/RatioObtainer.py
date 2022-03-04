@@ -21,8 +21,7 @@ class RatioObtainer:
                 data = json.load(f)
                 if [record for record in data if record['date_fetched'] == now and record['base_currency'] == self.base and record['target_currency'] == self.target]:
                     return True
-                else:
-                    return False
+                return False
         except:
             return False
 

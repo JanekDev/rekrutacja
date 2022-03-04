@@ -30,7 +30,7 @@ class RatioObtainer:
         # This function calls API for today's exchange ratio
         # Should ask API for today's exchange ratio with given base and target currency
         # and call save_ratio method to save it
-        response = urllib.request.urlopen(url + '?base=' + self.base + '&symbols=' + self.target)
+        response = urllib.request.urlopen(f'{url}?base={self.base}&symbols={self.target}')
         data = json.loads(response.read())
         self.save_ratio(data['rates'][self.target])
 

@@ -4,7 +4,7 @@ import json
 class Importer:
 
     def __init__(self):
-        pass
+        self.tasks = []
 
     def read_tasks(self):
         with open('taski.json', 'r', encoding='utf-8') as file:
